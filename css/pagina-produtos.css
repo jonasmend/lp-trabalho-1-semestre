@@ -1,0 +1,18 @@
+.titulo {
+  background-color: orange;
+}
+
+.button {
+  text-align: end;
+}
+
+.mb-3 {
+  margin-top: 1rem;
+}
+
+table {
+  border: 1px solid black;
+}
+th, td {
+  text-align: center;
+}
