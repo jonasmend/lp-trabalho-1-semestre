@@ -1,0 +1,10 @@
+.form-group {
+  justify-content: center;
+  padding: 1rem;
+  border: solid 2px;
+  border-radius: 1rem;
+}
+
+.buttons {
+  text-align: end;
+}

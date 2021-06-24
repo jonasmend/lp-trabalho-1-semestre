@@ -1,4 +1,4 @@
-<?php //conexao.php
+<?php
   class Conexao{
     private static $dbNome = 'padaria';
     private static $dbHost = 'localhost';
