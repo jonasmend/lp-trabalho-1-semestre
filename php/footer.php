@@ -9,8 +9,8 @@
 <body class="d-flex flex-column h-100">
 
 <footer class="footer mt-auto py-3" style="background-color: #c0392b">
-  <div class="container">
-    <span class="" style="color: white">Place sticky footer content here.</span>
+  <div class="container text-center">
+    <span class="" style="color: white;">Padaria Bread© - since 2021</span>
   </div>
 </footer>
 

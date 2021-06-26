@@ -18,7 +18,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c0392b">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="fas fa-bread-slice"></i> Padaria Bread</a>
+      <a class="navbar-brand" href="pagina-principal.php"><i class="fas fa-bread-slice"></i> Padaria Bread</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

@@ -1,0 +1,49 @@
+body {
+  background-image: url('../img/padaria-back.png');
+  color: white;
+}
+
+.features {
+	padding: 100px 0;
+	/*background-color: #f6f6f6;*/
+}
+.fa {
+	display: inline-block;
+}
+.features i.fas, .features i.far, .features i.fa {
+	font-size: 38px;
+	margin-bottom: 20px;
+	color: white;
+	width: 100px;
+	height: 100px;
+	padding: 30px 0;
+	border-radius: 50%;
+	background: linear-gradient(to right, #c0392b, #c06d64);
+	box-shadow: 10px 10px 10px, rgba(0, 0, 0, .05);
+}
+
+.titulo {
+	margin-bottom: 70px;
+}
+.titulo p {
+	font-size: 18px;
+}
+.titulo h2 {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+.titulo h2::after {
+	position: absolute;
+	content: "";
+	background: linear-gradient(to right, #5ca9fb, #6372ff);
+	height: 5px;
+	width: 60px;
+	bottom: 0;
+	margin-left: -30px;
+	left: 50%;
+}
+.col-md-offset-1 {
+	margin-left: 8.33333333%;
+}
