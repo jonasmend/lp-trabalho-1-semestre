@@ -53,7 +53,7 @@
           </div>
           <div class="col-10">
             <label for="lblDescricao">Informe a descrição do produto: </label>
-            <input type="text" class="form-control" id="txtDescricao" name="txtDescricao" value="<?php echo $descricao?>">
+            <input type="text" class="form-control" id="txtDescricao" name="txtDescricao" value="<?php echo $descricao?>" required>
           </div>
         </div>
         <div class="row input-field">

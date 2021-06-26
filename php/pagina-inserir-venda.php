@@ -40,7 +40,7 @@
         <div class="input-field col-6">
           <label for="lblDescricao">Selecione o Cliente</label>
           <!--input type="text" class="form-control" id="txtDescricao" name="txtDescricao" required-->
-          <select class="form-select" id="slcCliente" name="slcCliente">
+          <select class="form-select" id="slcCliente" name="slcCliente" required>
             <option value="" disabled selected>Escolha o Cliente</option>
             <?php 
               foreach($listaClientes as $cliente) { ?>
@@ -51,7 +51,7 @@
         <div class="input-field col-6">
           <label for="lblDescricao">Selecione o Produto</label>
           <!--input type="text" class="form-control" id="txtDescricao" name="txtDescricao" required-->
-          <select class="form-select" id="slcProduto" name="slcProduto">
+          <select class="form-select" id="slcProduto" name="slcProduto" required>
             <option value="" disabled selected>Escolha o Produto</option>
             <?php 
               foreach($listaProdutos as $produto) { ?>

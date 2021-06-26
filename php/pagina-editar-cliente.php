@@ -58,37 +58,37 @@
           </div>
           <div class="col-10">
             <label for="lblNome">Informe o nome do cliente</label>
-            <input type="text" class="form-control" id="txtNome" name="txtNome" value="<?php echo $nome?>">
+            <input type="text" class="form-control" id="txtNome" name="txtNome" value="<?php echo $nome?>" required>
           </div>
         </div>
         <div class="row input-field">
           <div class="col-6">
             <label for="lblCPF">Informe o CPF: </label>
-            <input type="text" class="form-control" id="txtCPF" name="txtCPF" value="<?php echo $cpf?>">
+            <input type="text" class="form-control" id="txtCPF" name="txtCPF" value="<?php echo $cpf?>" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="Ex: 000.000.000-00" required>
           </div>
           <div class="col-6">
             <label for="lblNascimento">Informe a data de nascimento: </label>
-            <input type="text" class="form-control" id="txtNascimento" name="txtNascimento" value="<?php echo $data_nascimento?>">
+            <input type="text" class="form-control" id="txtNascimento" name="txtNascimento" value="<?php echo $data_nascimento?>" pattern="[0-3]{1}[0-9]{1}/[0-1]{1}[0-9]{1}/[0-9]{4}" placeholder="Ex: 01/01/2000" required>
           </div>
         </div>
         <div class="row input-field">
           <div class="col-5">
             <label for="lblCEP">Informe o CEP: </label>
-            <input type="text" class="form-control" id="txtCEP" name="txtCEP" value="<?php echo $cep?>">
+            <input type="text" class="form-control" id="txtCEP" name="txtCEP" value="<?php echo $cep?>" pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}" placeholder="Ex: 00.000-000" required>
           </div>
           <div class="col-5">
             <label for="lblRua">Informe a Rua: </label>
-            <input type="text" class="form-control" id="txtRua" name="txtRua" value="<?php echo $rua?>">
+            <input type="text" class="form-control" id="txtRua" name="txtRua" value="<?php echo $rua?>" required>
           </div>
           <div class="col-2">
             <label for="lblNumero">Informe a Número: </label>
-            <input type="number" class="form-control" id="txtNumero" name="txtNumero" value="<?php echo $numero?>">
+            <input type="number" class="form-control" id="txtNumero" name="txtNumero" value="<?php echo $numero?>" required>
           </div>
         </div>
         <div class="row input-field">
           <div class="col-5">
             <label for="lblBairro">Informe a Bairro: </label>
-            <input type="text" class="form-control" id="txtBairro" name="txtBairro" value="<?php echo $bairro?>">
+            <input type="text" class="form-control" id="txtBairro" name="txtBairro" value="<?php echo $bairro?>" required>
           </div>
           <div class="col-7">
             <label for="lblComplemento">Informe a Complemento: </label>
