@@ -1,4 +1,4 @@
-<?php 
+<?php
   include 'menu.php';
 
   if(isset($_GET['busca']))
@@ -10,9 +10,12 @@
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   if($busca != '')
-    $sql = 'SELECT * FROM produto WHERE descricao LIKE "%'.$busca.'%" ORDER BY descricao';
-  else $sql = 'SELECT * FROM produto ORDER BY descricao';
-  $listaProdutos = $pdo->query($sql);
+    $sql = "SELECT * FROM venda AS v INNER JOIN produto AS p ON (v.id_produto=p.id) INNER JOIN cliente AS c ON (v.id_cliente=c.id) WHERE p.descricao LIKE "%'.$busca.'%" ORDER BY p.descricao";
+  else 
+    $sql = "SELECT * FROM venda AS v INNER JOIN produto AS p ON (v.id_produto=p.id) INNER JOIN cliente AS c ON (v.id_cliente=c.id) ORDER BY p.descricao";
+  $listaVendas = $pdo->query($sql);
+  //$vendas = $listaVendas->fetch(PDO::FETCH_ASSOC);
+  //var_dump($vendas);
 ?>
 
 <!DOCTYPE html>
@@ -26,9 +29,9 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="../css/pagina-produtos.css">
+  <link rel="stylesheet" href="../css/pagina-vendas.css">
 
-  <title>Lista de Produtos</title>
+  <title>Lista de Vendas</title>
 </head>
 <body>
 
@@ -36,7 +39,7 @@
     <div class="">
       <div class="">
       <h3 class="titulo text-center">
-      Lista de Produtos
+      Lista de Vendas
       </h3>
       </div>
     </div>
@@ -45,7 +48,7 @@
   <div class="container">
     <div class="row"> 
       
-      <form action="pagina-produtos.php" method="GET">
+      <form action="pagina-vendas.php" method="GET">
         <div class="row">
           <div class="input-group mb-3">
             <input type="text" placeholder="Informe a descrição do produto para filtrar os resultados" class="form-control" id="txtBusca" name="busca">
@@ -59,21 +62,25 @@
         
           <tr class="">
             <th>ID</th>
-            <th>DESCRIÇÃO</th>
-            <th>ESTOQUE</th>
-            <th>PREÇO</th>
+            <th>PRODUTO</th>
+            <th>CLIENTE</th>
+            <th>QUANTIDADE</th>
+            <th>VALOR</th>
+            <th>TOTAL</th>
             <th colspan="2">AÇÃO</th>
           </tr>
           <?php
-            foreach($listaProdutos as $produto){
+            foreach($listaVendas as $venda){
           ?>
           <tr>
-            <td><?php echo $produto['id'];?></td>
-            <td><?php echo $produto['descricao'];?></td>
-            <td><?php echo $produto['estoque'];?></td>
-            <td><?php echo $produto['preco'];?></td>
-            <td><button class="btn btn-warning" onclick="JavaScript:location.href='pagina-editar-produto.php?id=' + <?php echo $produto['id'];?>"><i class="fas fa-edit"></i></button></td>
-            <td><button class="btn btn-danger" onclick="JavaScript:location.href='pagina-excluir-produto.php?id=' + <?php echo $produto['id'];?>"><i class="fas fa-trash"></i></button></td>
+            <td><?php echo $venda[0];?></td>
+            <td><?php echo $venda['descricao'];?></td>
+            <td><?php echo $venda['nome'];?></td>
+            <td><?php echo $venda['quantidade'];?></td>
+            <td><?php echo $venda['valor_produto'];?></td>
+            <td><?php echo $venda['valor_venda'];?></td>
+            <!--td><button class="btn btn-warning" onclick="JavaScript:location.href='pagina-editar-venda.php?id=' + <?php echo $venda['id'];?>"><i class="fas fa-edit"></i></button></td-->
+            <td><button class="btn btn-danger" onclick="JavaScript:location.href='pagina-estornar-venda.php?id=' + <?php echo $venda[0];?>"><i class="fas fa-arrow-circle-left"></i></button></td>
           </tr>
           <?php
             }
@@ -81,7 +88,7 @@
         </table>
 
         <div class="button col-12">
-          <button type="button" class="btn btn-success" onclick="Javascript:location.href='pagina-inserir-produto.php'"><i class="fas fa-plus"></i> Cadastrar</button>
+          <button type="button" class="btn btn-success" onclick="Javascript:location.href='pagina-inserir-venda.php'"><i class="fas fa-plus"></i> Cadastrar</button>
         </div>
         
       </div>
