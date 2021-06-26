@@ -1,4 +1,5 @@
 <?php
+  include 'verificar-usuario-logado.php';
   include 'menu.php';
 
   include 'conexao.php';

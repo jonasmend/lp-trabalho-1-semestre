@@ -1,3 +1,7 @@
+<?php
+  //include 'verificar-usuario-logado.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
   <title>Padaria Bread</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c0392b">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="fas fa-bread-slice"></i> Padaria Bread</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,6 +29,11 @@
           <a class="nav-link" href="pagina-vendas.php">Vendas</a>
         </div>
       </div>
+      <a href="logout.php">
+        <button class="btn btn-outline-light">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </a>
     </div>
   </nav>
 </body>

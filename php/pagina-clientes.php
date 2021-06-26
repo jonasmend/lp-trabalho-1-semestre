@@ -1,4 +1,5 @@
 <?php //listarCompetidores.php
+  include 'verificar-usuario-logado.php';
   include 'menu.php';
 
   if(isset($_GET['busca']))
